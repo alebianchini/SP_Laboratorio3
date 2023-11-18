@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&display=swap" rel="stylesheet">
+    <title>SP Alejo Bianchini</title>
+</head>
+
+<body>
+    <main>
+        <div id="divMain">
+            <form action="">
+                <h1>Formulario Lista</h1>
+                <div id="divTabla"></div>
+                <button type="button" id="btnAgregar" class="btn">Agregar Elemento</button>
+            </form><br>
+        </div>
+        <div id="divSpinner">
+            <span id="spanSpinner"></span>
+        </div>
+        <div id="divABM">
+            <form hidden>
+                <h1 id="tituloABM">Formulario ABM</h1>
+                <fieldset id="fieldsetABM">
+                    <legend>Datos</legend>
+                    <label>ID:
+                        <input type="text" id="txtID" name="txtID" placeholder="ID" readonly>
+                    </label> <br>
+                    <label>Nombre:
+                        <input type="text" id="txtNombre" name="txtNombre" placeholder="Nombre">
+                    </label> <br>
+                    <label>Apellido:
+                        <input type="text" id="txtApellido" name="txtApellido" placeholder="Apellido">
+                    </label> <br>
+                    <label>Edad:
+                        <input type="number" id="txtEdad" name="txtEdad" placeholder="Edad">
+                    </label> <br>
+                    <fieldset>
+                        <legend>Tipo</legend>
+                        <input type="radio" id="rdoFutbolista" name="rdoTipo" value="futbolista" checked>Futbolista
+                        <input type="radio" id="rdoProfesional" name="rdoTipo" value="profesional">Profesional
+                    </fieldset> <br>
+                    <label>Equipo:
+                        <input type="text" id="txtEquipo" name="txtEquipo" placeholder="Equipo">
+                    </label> <br>
+                    <label>Posicion:
+                        <input type="text" id="txtPosicion" name="txtPosicion" placeholder="Posicion">
+                    </label> <br>
+                    <label>Cantidad de Goles:
+                        <input type="number" id="txtCantGoles" name="txtCantGoles" placeholder="Cantidad Goles">
+                    </label> <br>
+                    <label>Titulo:
+                        <input type="text" id="txtTitulo" name="txtTitulo" placeholder="Titulo">
+                    </label> <br>
+                    <label>Facultad:
+                        <input type="text" id="txtFacultad" name="txtFacultad" placeholder="Facultad">
+                    </label> <br>
+                    <label>Año de Graduacion:
+                        <input type="number" id="txtAñoGrad" name="txtAñoGrad" placeholder="Año de Graduacion">
+                    </label> <br>
+                    <label id="labelErrorMessage" class="errorMessage" hidden>* Uno o más campos no cumple con los requisistos, revise la documentación</label>
+                </fieldset>
+                <input type="button" id="btnAceptar" value="Aceptar" class="btn">
+                <input type="button" id="btnCancelar" value="Cancelar" class="btn">
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
