@@ -135,10 +135,6 @@ window.addEventListener("click", (e) => {
             const { txtID, txtNombre, txtApellido, txtEdad, rdoTipo, txtEquipo, txtPosicion, txtCantGoles, txtTitulo, txtFacultad, txtAñoGrad } = formABM;
             var nuevaPersona = new Object();
             if (rdoFutbolista.checked) {
-                /*if (txtAnoFab.value < 1886 || txtVelMax.value < 1 || txtAltMax.value < 1 || txtAutonomia.value < 1) {
-                    showErrorMessage();
-                    return false;
-                }*/
                 nuevaPersona = new Futbolista(undefined, txtNombre.value, txtApellido.value, parseInt(txtEdad.value), txtEquipo.value, txtPosicion.value, parseInt(txtCantGoles.value));
                 console.log(nuevaPersona);
                 agregarSpinner();
@@ -168,10 +164,6 @@ window.addEventListener("click", (e) => {
                     alert(JSON.stringify(error));
                 }
             } else {
-                /*if (txtAnoFab.value < 1886 || txtVelMax.value < 1 || txtCantPue.value < 0 || txtCantRue.value < 1) {
-                    showErrorMessage();
-                    return false;
-                }*/
                 nuevaPersona = new Profesional(undefined, txtNombre.value, txtApellido.value, parseInt(txtEdad.value), txtTitulo.value, txtFacultad.value, parseInt(txtAñoGrad.value));
                 agregarSpinner();
                 try {
