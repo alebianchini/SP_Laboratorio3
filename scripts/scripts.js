@@ -144,11 +144,17 @@ window.addEventListener("click", (e) => {
                 agregarSpinner();
                 try {
                     let response = sendAlta(nuevaPersona);
-                    console.log(response);
                     response.then(response => {
                         response.json().then(response => {
-                            console.log("nuevo id: " + response.id);
                             nuevaPersona.id = response.id;
+                            if (nuevaPersona.edad < 16 || nuevaPersona.cantidadGoles < 0) {
+                                showErrorMessage();
+                                limpiarFormulario();
+                                eliminarSpinner();
+                                alert("Alta Denegada. Hay datos que no cumplen con la documentación");
+                                return false;
+                            }
+                            console.log("nuevo id: " + response.id);
                             lista.push(nuevaPersona);
                             actualizarTabla(lista);
                             limpiarFormulario();
@@ -167,15 +173,20 @@ window.addEventListener("click", (e) => {
                     return false;
                 }*/
                 nuevaPersona = new Profesional(undefined, txtNombre.value, txtApellido.value, parseInt(txtEdad.value), txtTitulo.value, txtFacultad.value, parseInt(txtAñoGrad.value));
-                console.log(nuevaPersona);
                 agregarSpinner();
                 try {
                     let response = sendAlta(nuevaPersona);
-                    console.log(response)
                     response.then(response => {
                         response.json().then(response => {
-                            console.log("nuevo id: " + response.id);
                             nuevaPersona.id = response.id;
+                            if (nuevaPersona.edad < 16 || nuevaPersona.añoGraduacion < 1951) {
+                                showErrorMessage();
+                                limpiarFormulario();
+                                eliminarSpinner();
+                                alert("Alta Denegada. Hay datos que no cumplen con la documentación");
+                                return false;
+                            }
+                            console.log("nuevo id: " + response.id);
                             lista.push(nuevaPersona);
                             actualizarTabla(lista);
                             limpiarFormulario();
