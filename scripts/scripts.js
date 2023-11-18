@@ -7,14 +7,14 @@ const formDatos = document.forms[0];
 const formABM = document.forms[1];
 const divTabla = document.getElementById("divTabla");
 const spinner = document.getElementById("spanSpinner");
-const rdoFutbolista = document.getElementById("rdoFutbolista"); //rdoAereo
-const rdoProfesional = document.getElementById("rdoProfesional"); //rdoTerrestre
-const inpEquipo = document.getElementById("txtEquipo"); //inpAltMax
-const inpPosicion = document.getElementById("txtPosicion"); //inpAutonomia
-const inpCantGoles = document.getElementById("txtCantGoles"); //nada
-const inpTitulo = document.getElementById("txtTitulo"); //inpCantPue
-const inpFacultad = document.getElementById("txtFacultad"); //inpCantRue
-const inpAñoGrad = document.getElementById("txtAñoGrad"); //nada
+const rdoFutbolista = document.getElementById("rdoFutbolista");
+const rdoProfesional = document.getElementById("rdoProfesional");
+const inpEquipo = document.getElementById("txtEquipo");
+const inpPosicion = document.getElementById("txtPosicion");
+const inpCantGoles = document.getElementById("txtCantGoles");
+const inpTitulo = document.getElementById("txtTitulo");
+const inpFacultad = document.getElementById("txtFacultad");
+const inpAñoGrad = document.getElementById("txtAñoGrad");
 const labelErrorMessage = document.getElementById("labelErrorMessage");
 const tituloABM = document.getElementById("tituloABM");
 const btnAceptar = document.getElementById("btnAceptar");
@@ -188,7 +188,6 @@ window.addEventListener("click", (e) => {
                 } catch (error) {
                     alert(JSON.stringify(error));
                 }
-                //eliminarSpinner();
             }
         }
     }
